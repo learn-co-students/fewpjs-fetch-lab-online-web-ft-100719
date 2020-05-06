@@ -1,5 +1,13 @@
 function fetchBooks() {
+  /*
+  fetch request sent to the url
+  then the response is turned into json using json();
+  then that rendered json is stored as the variable json
+  and passed into renderBooks();
 
+  All is returned to actually put it on the page...?
+  */
+  return fetch('https://anapioficeandfire.com/api/books').then(response => response.json()).then(json => renderBooks(json));
 }
 
 function renderBooks(json) {
